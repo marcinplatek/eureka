@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "eureka"
+version = "0.1.0"
+description = ""
+authors = ["marcinplatek <maruplat@gmail.com>"]
+readme = "README.md"
+packages = [{include = "eureka", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "~3.10"
+typer = "^0.7.0"
+openai-whisper = "^20230117"
+pydub = "^0.25.1"
+joblib = "^1.2.0"
+tiktoken = "^0.3.3"
+pyperclip = "^1.8.2"
+
+
+[tool.poetry.group.lint.dependencies]
+ruff = "^0.0.263"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+eureka = "eureka.__main__:main"
